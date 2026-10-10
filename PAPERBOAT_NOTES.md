@@ -32,3 +32,6 @@ Windows, Ryzen 5, RTX 3060 **6GB** VRAM. Needs CUDA torch build; AI video models
 ## Layout
 - `DepthFlow/` – cloned upstream repo (don't copy its `.venv` between machines; recreate it).
 - `test/` – throwaway sample image and output.
+
+## Vendored code
+`DepthFlow/` is a copy of upstream BrokenSource/DepthFlow at commit bb85e20b0700df17151b4cae109da98b6cd2afce (AGPL-3.0, see DepthFlow/license.txt), included as plain files so one clone gets everything. Create the venv inside it per machine (never commit `.venv`).

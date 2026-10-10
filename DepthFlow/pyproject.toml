@@ -1,0 +1,38 @@
+[project]
+name        = "depthflow"
+description = "🌊 Images to 3D parallax effect videos"
+version     = "1.0.1"
+license     = "AGPL-3.0"
+readme      = "readme.md"
+requires-python = ">=3.10"
+dependencies = [
+    "attrs",
+    "cyclopts",
+    "diskcache",
+    "imageio",
+    "numpy",
+    "pillow",
+    "platformdirs",
+    "pooch",
+    "pydantic",
+    "scipy",
+    "shaderflow",
+    "torch",
+    "torchvision",
+    "transformers",
+    "xxhash",
+]
+
+[project.urls]
+GitHub = "https://github.com/BrokenSource/DepthFlow"
+
+[project.scripts]
+depthflow = "depthflow.__main__:main"
+depth     = "depthflow.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel.force-include]
+"examples" = "depthflow/examples"
